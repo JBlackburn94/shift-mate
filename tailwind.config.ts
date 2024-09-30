@@ -13,6 +13,9 @@ const config: Config = {
         "sm-red": "#EF5455",
         "sm-yellow": "#FAD744",
       },
+      backgroundImage: {
+        hero: "url('../public/hero.webp')",
+      },
     },
   },
   plugins: [],

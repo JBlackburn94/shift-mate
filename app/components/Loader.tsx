@@ -10,7 +10,7 @@ export default function Loader() {
       initial={{ y: 0 }}
       animate={{ y: "-100%" }}
       transition={{ delay: 2.7, duration: 0.5 }}
-      className="flex flex-col justify-center items-center h-screen bg-sm-yellow px-5"
+      className="flex flex-col justify-center items-center h-screen w-full bg-sm-yellow px-5 absolute"
     >
       <motion.div
         initial={{ y: 0, opacity: 1 }}
@@ -24,7 +24,7 @@ export default function Loader() {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="text-6xl font-bold text-sm-red"
+            className="text-5xl font-bold text-sm-red"
           >
             {letter}
           </motion.h1>
@@ -35,7 +35,7 @@ export default function Loader() {
             initial={{ y: 100 }}
             animate={{ y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="text-6xl font-bold text-sm-blue"
+            className="text-5xl font-bold text-sm-blue"
           >
             {letter}
           </motion.h1>
@@ -51,9 +51,9 @@ export default function Loader() {
       </motion.p>
       <motion.span
         initial={{ width: 0 }}
-        animate={{ width: 400 }}
+        animate={{ width: 200 }}
         transition={{ delay: 0.6, duration: 2 }}
-        className="h-5 bg-sm-red w-[400px] mt-2 flex justify-start items-start"
+        className="h-5 bg-sm-red w-[200px] md:w-[400px] mt-2 flex justify-start items-start"
       ></motion.span>
     </motion.div>
   );
