@@ -8,6 +8,8 @@ export default function QuoteForm() {
   const [collection, setCollection] = useState("");
   const [dropOff, setDropOff] = useState("");
   const [date, setDate] = useState("");
+  const [multipleDrop, setMultipleDrop] = useState(false);
+  const [vanSize, setVanSize] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,7 +19,14 @@ export default function QuoteForm() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email, collection, dropOff, date }),
+      body: JSON.stringify({
+        email,
+        collection,
+        dropOff,
+        date,
+        multipleDrop,
+        vanSize,
+      }),
     });
 
     if (response.ok) {
@@ -32,7 +41,7 @@ export default function QuoteForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col justify-center items-center gap-5 bg-white shadow-md h-[90%] w-[90%] md:w-[60%] lg:w-[50%] rounded-xl bg-opacity-80 px-5"
+      className="flex flex-col justify-center items-center gap-5 bg-white shadow-md h-[95%] w-[90%] md:w-[60%] lg:w-[50%] rounded-xl bg-opacity-80 px-5"
     >
       <div className="text-center">
         <h1 className="font-[family-name:var(--font-get-voip)] text-3xl text-sm-blue">
@@ -52,18 +61,32 @@ export default function QuoteForm() {
         type="text"
         value={collection}
         onChange={(e) => setCollection(e.target.value)}
-        placeholder="Collection address"
+        placeholder="Collection postcode"
         className="p-2 rounded-xl border-2 border-sm-blue w-3/4"
         required
       />
       <input
         type="text"
-        value={collection}
-        onChange={(e) => setCollection(e.target.value)}
-        placeholder="Drop-off address"
+        value={dropOff}
+        onChange={(e) => setDropOff(e.target.value)}
+        placeholder="Drop-off postcode"
         className="p-2 rounded-xl border-2 border-sm-blue w-3/4"
         required
       />
+      <select
+        value={vanSize}
+        onChange={(e) => setVanSize(e.target.value)}
+        id=""
+        className="p-2 rounded-xl border-2 border-sm-blue w-3/4"
+      >
+        <option value="">Select a van size</option>
+        <option value="Small Van">
+          Small Van L x W x H - 1.7m x 1.49m x 1.2m
+        </option>
+        <option value="Medium Van">
+          Medium Van L x W x H - 2.4m x 1.7m x 1.4m
+        </option>
+      </select>
       <input
         type="date"
         value={date}
@@ -71,6 +94,11 @@ export default function QuoteForm() {
         placeholder="Date"
         className="p-2 rounded-xl border-2 border-sm-blue w-3/4"
       />
+      <span className="flex gap-2">
+        <p>Multiple Drop Offs?</p>
+        <input onChange={(e) => setMultipleDrop(true)} type="checkbox" />
+      </span>
+
       <button
         type="submit"
         className="bg-sm-red text-white font-semibold px-4 py-2 rounded-xl"

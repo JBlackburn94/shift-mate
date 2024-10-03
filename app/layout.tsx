@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 const getVoip = localFont({
-  src: "./fonts/GetVoip-Grotesque.otf",
+  src: "./fonts/GetVoIP-Grotesque.otf",
   variable: "--font-get-voip",
 });
 
