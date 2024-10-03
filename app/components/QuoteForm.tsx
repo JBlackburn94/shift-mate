@@ -94,7 +94,7 @@ export default function QuoteForm() {
       />
       <span className="flex gap-2">
         <p>Multiple Drop Offs?</p>
-        <input onChange={(e) => setMultipleDrop(true)} type="checkbox" />
+        <input onChange={(_e) => setMultipleDrop(true)} type="checkbox" />
       </span>
 
       <button
