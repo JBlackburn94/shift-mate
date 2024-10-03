@@ -50,7 +50,7 @@ export default function QuoteForm() {
       <input
         type="email"
         value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={(_e) => setEmail(_e.target.value)}
         placeholder="Email Address"
         className="p-2 rounded-xl border-2 border-sm-blue w-3/4"
         required
@@ -58,7 +58,7 @@ export default function QuoteForm() {
       <input
         type="text"
         value={collection}
-        onChange={(e) => setCollection(e.target.value)}
+        onChange={(_e) => setCollection(_e.target.value)}
         placeholder="Collection postcode"
         className="p-2 rounded-xl border-2 border-sm-blue w-3/4"
         required
@@ -66,14 +66,14 @@ export default function QuoteForm() {
       <input
         type="text"
         value={dropOff}
-        onChange={(e) => setDropOff(e.target.value)}
+        onChange={(_e) => setDropOff(_e.target.value)}
         placeholder="Drop-off postcode"
         className="p-2 rounded-xl border-2 border-sm-blue w-3/4"
         required
       />
       <select
         value={vanSize}
-        onChange={(e) => setVanSize(e.target.value)}
+        onChange={(_e) => setVanSize(_e.target.value)}
         id=""
         className="p-2 rounded-xl border-2 border-sm-blue w-3/4"
       >
@@ -88,7 +88,7 @@ export default function QuoteForm() {
       <input
         type="date"
         value={date}
-        onChange={(e) => setDate(e.target.value)}
+        onChange={(_e) => setDate(_e.target.value)}
         placeholder="Date"
         className="p-2 rounded-xl border-2 border-sm-blue w-3/4"
       />
