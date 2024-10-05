@@ -55,25 +55,51 @@ export default function Nav() {
       transition={{ delay: 2.7, duration: 0.2 }}
       className="z-40"
     >
-      <div className="flex justify-between items-center bg-sm-blue text-sm-yellow px-5 py-2 relative">
-        <span className="flex justify-center items-center gap-2">
-          <Phone />
-          <p>Phone</p>
-        </span>
+      <div className="flex lg:hidden justify-between items-center bg-sm-yellow text-sm-blue px-5 py-2 relative">
+        <div className="flex justify-center items-center gap-2">
+          <Link
+            href="https://api.whatsapp.com/send?phone=07737129843"
+            target="_blank"
+          >
+            <FaWhatsapp className="text-xl" />
+          </Link>
+          <Link
+            href="https://www.facebook.com/profile.php?id=61565297475622&rdid=SDTjxWWafnUdjeqf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FPai7heExECxXbbxS%2F"
+            target="_blank"
+          >
+            <FaFacebook className="text-xl" />
+          </Link>
+          <Link
+            href="https://www.instagram.com/Shiftmateservices"
+            target="_blank"
+          >
+            <FaInstagram className="text-xl" />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/bigbearbuysltd/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+          >
+            <FaLinkedin className="text-xl" />
+          </Link>
+          <Link
+            href="https://www.xiaohongshu.com/user/profile/66e19600000000001d033ddd?xhsshare=CopyLink&appuid=66e19600000000001d033ddd&apptime=1728078568"
+            target="_blank"
+          >
+            <SiXiaohongshu className="text-xl text-white bg-red-500 rounded p-1" />
+          </Link>
+        </div>
         <span className="flex justify-center items-center gap-2">
           <Mail />
-          <p>Email</p>
+          <Link href="info@shiftmate.co.uk">Email</Link>
         </span>
       </div>
-      <div className="flex justify-between items-center bg-sm-yellow text-black px-5 h-16">
-        <Link href="/">
-          <Image
-            src={logo}
-            alt="Shift Mate Logo"
-            className="w-1/2 ml-[-40px]"
-          />
-        </Link>
-        <div className="hidden lg:flex gap-10">
+      <div className="flex justify-between items-center bg-sm-blue text-white py-5 lg:py-10 px-5 h-16">
+        <div className="flex justify-start items-center w-1/3">
+          <Link href="/">
+            <Image src={logo} alt="Shift Mate Logo" className="w-1/2" />
+          </Link>
+        </div>
+        <div className="hidden lg:flex justify-center items-center gap-10 w-1/3">
           {links.map((link) => (
             <Link
               href={link.link}
@@ -84,6 +110,38 @@ export default function Nav() {
             </Link>
           ))}
         </div>
+        <div className="hidden lg:flex justify-end items-center gap-5 w-1/3">
+          <Link
+            href="https://api.whatsapp.com/send?phone=07737129843"
+            target="_blank"
+          >
+            <FaWhatsapp className="text-4xl" />
+          </Link>
+          <Link
+            href="https://www.facebook.com/profile.php?id=61565297475622&rdid=SDTjxWWafnUdjeqf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FPai7heExECxXbbxS%2F"
+            target="_blank"
+          >
+            <FaFacebook className="text-4xl" />
+          </Link>
+          <Link
+            href="https://www.instagram.com/Shiftmateservices"
+            target="_blank"
+          >
+            <FaInstagram className="text-4xl" />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/bigbearbuysltd/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+          >
+            <FaLinkedin className="text-4xl" />
+          </Link>
+          <Link
+            href="https://www.xiaohongshu.com/user/profile/66e19600000000001d033ddd?xhsshare=CopyLink&appuid=66e19600000000001d033ddd&apptime=1728078568"
+            target="_blank"
+          >
+            <SiXiaohongshu className="text-4xl text-white bg-red-500 rounded p-1" />
+          </Link>
+        </div>
         <div className="block lg:hidden z-50">
           <Hamburger toggled={open} toggle={setOpen} />
         </div>
@@ -93,7 +151,7 @@ export default function Nav() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ type: "spring", bounce: 0, duration: 0.2 }}
-          className="bg-sm-yellow text-sm-blue h-screen w-full absolute top-0 left-0 p-5 gap-2 flex justify-between items-center overflow-hidden"
+          className="bg-sm-blue text-sm-yellow h-screen w-full absolute top-0 left-0 p-5 gap-2 flex justify-between items-center overflow-hidden"
         >
           <div className="h-full w-[75%] flex flex-col justify-start items-start gap-20 pt-14">
             {links.map((link) => (
