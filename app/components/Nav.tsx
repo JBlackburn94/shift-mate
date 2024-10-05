@@ -87,17 +87,17 @@ export default function Nav() {
       </div>
       {open && (
         <motion.div
-          initial={{ x: "-100" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", bounce: 0, duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "spring", bounce: 0, duration: 0.2 }}
           className="bg-sm-yellow text-sm-blue h-screen w-full absolute top-0 left-0 p-5 gap-2 flex justify-between items-center overflow-hidden"
         >
-          <div className="border border-white h-full w-[75%] flex flex-col justify-center items-start gap-20">
+          <div className="h-full w-[75%] flex flex-col justify-start items-start gap-20 pt-14">
             {links.map((link) => (
               <motion.span
-                initial={{ x: "100", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ staggerChildren: 1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ staggerChildren: 1, delay: 0.2 }}
               >
                 <Link
                   href={link.link}
@@ -109,7 +109,9 @@ export default function Nav() {
               </motion.span>
             ))}
           </div>
-          <div className="border border-white h-full w-[25%]"></div>
+          <div className="border border-white flex flex-col justify-end items-end h-full w-[25%]">
+            <p>info@shiftmate.co.uk</p>
+          </div>
         </motion.div>
       )}
     </motion.nav>
