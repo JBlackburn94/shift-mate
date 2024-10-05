@@ -1,9 +1,23 @@
 "use client";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function Loader() {
   const headingOne = ["S", "H", "I", "F", "T"];
   const headingTwo = ["M", "A", "T", "E"];
+
+  useEffect(() => {
+    document.body.classList.add("no-scroll");
+
+    const timer = setTimeout(() => {
+      document.body.classList.remove("no-scroll");
+    }, 3200);
+
+    return () => {
+      clearTimeout(timer);
+      document.body.classList.remove("no-scroll");
+    };
+  }, []);
 
   return (
     <motion.div

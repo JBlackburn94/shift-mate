@@ -4,11 +4,23 @@ import logo from "../../public/shift-logo.svg";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { Divide as Hamburger } from "hamburger-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [open]);
 
   const links = [
     {
@@ -75,16 +87,29 @@ export default function Nav() {
       </div>
       {open && (
         <motion.div
-          initial={{ x: "-100%" }}
+          initial={{ x: "-100" }}
           animate={{ x: 0 }}
-          transition={{ type: "spring", bounce: 0, duration: 0.2 }}
-          className="flex flex-col gap-14 text-4xl justify-center items-center h-screen w-full absolute top-0 left-0 font-bold bg-sm-yellow text-black z-40"
+          transition={{ type: "spring", bounce: 0, duration: 0.5 }}
+          className="bg-sm-yellow text-sm-blue h-screen w-full absolute top-0 left-0 p-5 gap-2 flex justify-between items-center overflow-hidden"
         >
-          {links.map((link) => (
-            <Link key={link.id} href={link.link}>
-              {link.name}
-            </Link>
-          ))}
+          <div className="border border-white h-full w-[75%] flex flex-col justify-center items-start gap-20">
+            {links.map((link) => (
+              <motion.span
+                initial={{ x: "100", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ staggerChildren: 1 }}
+              >
+                <Link
+                  href={link.link}
+                  key={link.id}
+                  className="text-4xl font-bold uppercase"
+                >
+                  {link.name}
+                </Link>
+              </motion.span>
+            ))}
+          </div>
+          <div className="border border-white h-full w-[25%]"></div>
         </motion.div>
       )}
     </motion.nav>
