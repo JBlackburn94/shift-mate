@@ -6,7 +6,8 @@ import { Mail, Phone } from "lucide-react";
 import { Divide as Hamburger } from "hamburger-react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaFacebook, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -111,7 +112,7 @@ export default function Nav() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="border border-white flex flex-col justify-end items-end gap-4 h-full w-[25%]"
+            className="flex flex-col justify-end items-end gap-4 h-full w-[25%]"
           >
             <p>info@shiftmate.co.uk</p>
             <div className="flex justify-center items-center gap-2">
@@ -122,10 +123,22 @@ export default function Nav() {
                 <FaWhatsapp className="text-3xl" />
               </Link>
               <Link
-                href="https://api.whatsapp.com/send?phone=07737129843"
+                href="https://www.facebook.com/profile.php?id=61565297475622&rdid=SDTjxWWafnUdjeqf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FPai7heExECxXbbxS%2F"
                 target="_blank"
               >
                 <FaFacebook className="text-3xl" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/Shiftmateservices"
+                target="_blank"
+              >
+                <FaInstagram className="text-3xl" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/bigbearbuysltd/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
+              >
+                <FaLinkedin className="text-3xl" />
               </Link>
             </div>
           </motion.div>
