@@ -6,6 +6,7 @@ import { Mail, Phone } from "lucide-react";
 import { Divide as Hamburger } from "hamburger-react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -98,20 +99,36 @@ export default function Nav() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ staggerChildren: 1, delay: 0.2 }}
+                key={link.id}
               >
-                <Link
-                  href={link.link}
-                  key={link.id}
-                  className="text-4xl font-bold uppercase"
-                >
+                <Link href={link.link} className="text-4xl font-bold uppercase">
                   {link.name}
                 </Link>
               </motion.span>
             ))}
           </div>
-          <div className="border border-white flex flex-col justify-end items-end h-full w-[25%]">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="border border-white flex flex-col justify-end items-end gap-4 h-full w-[25%]"
+          >
             <p>info@shiftmate.co.uk</p>
-          </div>
+            <div className="flex justify-center items-center gap-2">
+              <Link
+                href="https://api.whatsapp.com/send?phone=07737129843"
+                target="_blank"
+              >
+                <FaWhatsapp className="text-3xl" />
+              </Link>
+              <Link
+                href="https://api.whatsapp.com/send?phone=07737129843"
+                target="_blank"
+              >
+                <FaFacebook className="text-3xl" />
+              </Link>
+            </div>
+          </motion.div>
         </motion.div>
       )}
     </motion.nav>
