@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
+import { SiXiaohongshu } from "react-icons/si";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -114,31 +115,37 @@ export default function Nav() {
             transition={{ delay: 0.3 }}
             className="flex flex-col justify-end items-end gap-4 h-full w-[25%]"
           >
-            <p>info@shiftmate.co.uk</p>
+            <p className="text-xl">info@shiftmate.co.uk</p>
             <div className="flex justify-center items-center gap-2">
               <Link
                 href="https://api.whatsapp.com/send?phone=07737129843"
                 target="_blank"
               >
-                <FaWhatsapp className="text-3xl" />
+                <FaWhatsapp className="text-4xl" />
               </Link>
               <Link
                 href="https://www.facebook.com/profile.php?id=61565297475622&rdid=SDTjxWWafnUdjeqf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FPai7heExECxXbbxS%2F"
                 target="_blank"
               >
-                <FaFacebook className="text-3xl" />
+                <FaFacebook className="text-4xl" />
               </Link>
               <Link
                 href="https://www.instagram.com/Shiftmateservices"
                 target="_blank"
               >
-                <FaInstagram className="text-3xl" />
+                <FaInstagram className="text-4xl" />
               </Link>
               <Link
                 href="https://www.linkedin.com/in/bigbearbuysltd/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
               >
-                <FaLinkedin className="text-3xl" />
+                <FaLinkedin className="text-4xl" />
+              </Link>
+              <Link
+                href="https://www.xiaohongshu.com/user/profile/66e19600000000001d033ddd?xhsshare=CopyLink&appuid=66e19600000000001d033ddd&apptime=1728078568"
+                target="_blank"
+              >
+                <SiXiaohongshu className="text-4xl text-white bg-red-500 rounded p-1" />
               </Link>
             </div>
           </motion.div>
