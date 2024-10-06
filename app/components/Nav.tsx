@@ -96,7 +96,7 @@ export default function Nav() {
       <div className="flex justify-between items-center bg-sm-blue text-white py-5 lg:py-10 px-5 h-16">
         <div className="flex justify-start items-center w-1/3">
           <Link href="/">
-            <Image src={logo} alt="Shift Mate Logo" className="w-1/2" />
+            <Image src={logo} alt="Shift Mate Logo" className="w-40 md:w-1/2" />
           </Link>
         </div>
         <div className="hidden lg:flex justify-center items-center gap-10 w-1/3">
