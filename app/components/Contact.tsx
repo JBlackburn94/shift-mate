@@ -14,8 +14,8 @@ export default function Contact() {
           <h2 className="text-3xl font-bold mt-10">Contact</h2>
           <p className="text-lg md:text-xl lg:text-2xl font-light text-center">
             Your go-to guy for all things moving, lifting, and delivering! From
-            house removals to student moves, we've got you covered with a smile
-            😊 🚚
+            house removals to student moves, we have got you covered with a
+            smile 😊 🚚
           </p>
         </div>
         <div className="flex flex-row lg:flex-col justify-between lg:justify-start items-center lg:items-start w-full gap-2">

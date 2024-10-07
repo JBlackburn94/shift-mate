@@ -2,7 +2,7 @@
 import Image from "next/image";
 import logo from "../../public/shift-logo.svg";
 import Link from "next/link";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Divide as Hamburger } from "hamburger-react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";

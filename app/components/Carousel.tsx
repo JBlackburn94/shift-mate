@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import { StarIcon } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Review from "./Review";
