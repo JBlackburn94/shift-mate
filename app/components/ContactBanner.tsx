@@ -10,11 +10,11 @@ export default function ContactBanner() {
           <span className="font-bold text-neutral-900">Get help today.</span>
         </h2>
       </div>
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-2 h-full w-1/4 text-white font-bold bg-sm-red p-5">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-2 h-full w-[30%] text-white font-bold bg-sm-red px-5">
         <Link
           href="https://api.whatsapp.com/send?phone=07737129843"
           target="_blank"
-          className="text-xl md:text-2xl"
+          className="text-lg md:text-xl lg:text-2xl"
         >
           WhatsApp
         </Link>
