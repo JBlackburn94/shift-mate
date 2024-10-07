@@ -1,15 +1,17 @@
-import Hero from "./components/Hero";
 import Loader from "./components/Loader";
 import Nav from "./components/Nav";
-import Reviews from "./components/Reviews";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Carousel from "./components/Carousel";
 
 export default function Home() {
   return (
     <main className="overflow-hidden">
-      <Loader />
+      {/* <Loader /> */}
       <Nav />
       <Hero />
-      <Reviews />
+      <Carousel />
+      <About />
     </main>
   );
 }
