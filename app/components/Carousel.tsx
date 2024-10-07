@@ -17,10 +17,7 @@ export default function Carousel() {
   }, [emblaApi]);
 
   return (
-    <div
-      className="embla p-5 bg-sm-blue rounded-xl w-[90%] mt-5 mx-auto"
-      ref={emblaRef}
-    >
+    <div className="embla bg-sm-blue w-[90%] m-10 mx-auto" ref={emblaRef}>
       <div className="embla__container h-56 w-full text-white cursor-grab active:cursor-grabbing select-none">
         <Review
           name="Tisa Mary Femenga"
