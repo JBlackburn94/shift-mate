@@ -39,13 +39,13 @@ export default function QuoteForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col justify-center items-center gap-5 bg-white shadow-md h-[80%] w-[90%] md:w-[60%] lg:max-w-[40%] rounded-xl bg-opacity-80 px-5"
+      className="flex flex-col justify-center items-center gap-5 bg-white shadow-md h-[80%] w-[90%] md:w-[60%] lg:max-w-[40%] rounded-xl bg-opacity-90 px-5"
     >
       <div className="text-center">
         <h1 className="font-[family-name:var(--font-get-voip)] text-3xl text-sm-blue">
           <span className="text-sm-red">Shift</span>Mate
         </h1>
-        <p>Enter your details below to receive a quote.</p>
+        <p className="font-semibold">Need help moving? Get a quote below.</p>
       </div>
       <input
         type="email"
