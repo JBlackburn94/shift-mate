@@ -42,8 +42,8 @@ export default function QuoteForm() {
       className="flex flex-col justify-center items-center gap-5 bg-white shadow-md h-[80%] w-[90%] md:w-[60%] lg:max-w-[40%] rounded-xl bg-opacity-90 px-5"
     >
       <div className="text-center">
-        <h1 className="font-[family-name:var(--font-get-voip)] text-3xl text-sm-blue">
-          <span className="text-sm-red">Shift</span>Mate
+        <h1 className="font-[family-name:var(--font-get-voip)] text-3xl text-sm-red">
+          <span className="text-sm-yellow">Shift</span>Mate
         </h1>
         <p className="font-semibold">Need help moving? Get a quote below.</p>
       </div>

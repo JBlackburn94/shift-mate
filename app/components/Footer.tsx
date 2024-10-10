@@ -9,19 +9,39 @@ export default function Footer() {
         <p className=" text-xl">Contact number</p>
       </div>
       <div className="w-full md:w-1/2 flex flex-col justify-start items-center mt-2 md:mt-0">
-        <Link href="#" className="text-xl underline">
+        <Link
+          href="https://api.whatsapp.com/send?phone=07737129843"
+          target="_blank"
+          className="text-xl underline"
+        >
           WhatsApp
         </Link>
-        <Link href="#" className="text-xl underline">
+        <Link
+          href="https://www.facebook.com/profile.php?id=61565297475622&rdid=SDTjxWWafnUdjeqf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FPai7heExECxXbbxS%2F"
+          target="_blank"
+          className="text-xl underline"
+        >
           Facebook
         </Link>
-        <Link href="#" className="text-xl underline">
+        <Link
+          href="https://www.linkedin.com/in/bigbearbuysltd/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank"
+          className="text-xl underline"
+        >
+          LinkedIn
+        </Link>
+        <Link
+          href="https://www.instagram.com/Shiftmateservices"
+          target="_blank"
+          className="text-xl underline"
+        >
           Instagram
         </Link>
-        <Link href="#" className="text-xl underline">
-          Instagram
-        </Link>
-        <Link href="#" className="text-xl underline">
+        <Link
+          href="https://www.xiaohongshu.com/user/profile/66e19600000000001d033ddd?xhsshare=CopyLink&appuid=66e19600000000001d033ddd&apptime=1728078568"
+          target="_blank"
+          className="text-xl underline"
+        >
           Xiaohongshu
         </Link>
       </div>

@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: "blackburntestemail@gmail.com",
+      to: "shiftmateservices@gmail.com",
       subject: "New Contact Form Submission",
       text: `You have received a new submission.\n\nEmail: ${email}\nCollection: ${collection}\nDrop Off: ${dropOff}\nDate: ${date}\nMultiple Drop Offs: ${multipleDrop}`,
     });
