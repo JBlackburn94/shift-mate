@@ -11,7 +11,7 @@ export default function Contact() {
       </div>
       <div className="flex flex-col justify-center items-center p-5 gap-10 bg-white h-full w-full">
         <div className="flex flex-col justify-center items-center gap-4">
-          <h2 className="text-3xl font-bold mt-10">Contact</h2>
+          <h2 className="text-3xl font-bold mt-10">Hey, I&apos;m Aaron!</h2>
           <p className="text-lg md:text-xl lg:text-2xl font-light text-center">
             Your go-to guy for all things moving, lifting, and delivering! From
             house removals to student moves, we have got you covered with a
@@ -29,7 +29,7 @@ export default function Contact() {
             <Phone size={24} />
             <Link
               className="underline"
-              href="https://api.whatsapp.com/send?phone=07737129843"
+              href="https://api.whatsapp.com/send?phone=+447737129843"
             >
               WhatsApp
             </Link>
